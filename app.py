@@ -175,10 +175,10 @@ st.markdown("""
 #     st.error("❌ Could not find app_final.csv. Please place it in the same folder as app.py")
 #     st.stop()
 
+
 @st.cache_data
 def load_data():
-    url = "https://drive.google.com/uc?id=1eDMpEgq-zmgNnagODRn5VDZnQEqi1K6j"
-    return pd.read_csv(url)
+    return pd.read_csv("app_final.csv")
 
 @st.cache_data
 def load_summary():
