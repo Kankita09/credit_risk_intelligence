@@ -194,13 +194,19 @@ def load_summary():
 
 df = load_data()
 summary = load_summary()
+if 'AGE_GROUP' not in df.columns and 'AGE_YEARS' in df.columns:
+    df['AGE_GROUP'] = pd.cut(
+        df['AGE_YEARS'],
+        bins=[20, 30, 40, 50, 60, 70],
+        labels=['20-30', '30-40', '40-50', '50-60', '60-70']
+    )
 
 # Ensure derived columns exist
-if 'AGE_GROUP' not in df.columns:
-    df['AGE_YEARS'] = (df['DAYS_BIRTH'] / 365).round(1)
-    df['AGE_GROUP'] = pd.cut(df['AGE_YEARS'],
-                              bins=[20, 30, 40, 50, 60, 70],
-                              labels=['20-30', '30-40', '40-50', '50-60', '60-70'])
+# if 'AGE_GROUP' not in df.columns:
+#     df['AGE_YEARS'] = (df['DAYS_BIRTH'] / 365).round(1)
+#     df['AGE_GROUP'] = pd.cut(df['AGE_YEARS'],
+#                               bins=[20, 30, 40, 50, 60, 70],
+#                               labels=['20-30', '30-40', '40-50', '50-60', '60-70'])
 if 'CREDIT_INCOME_RATIO' not in df.columns:
     df['CREDIT_INCOME_RATIO'] = df['AMT_CREDIT'] / df['AMT_INCOME_TOTAL']
 if 'ANNUITY_INCOME_RATIO' not in df.columns:
