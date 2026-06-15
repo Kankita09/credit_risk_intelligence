@@ -1,0 +1,19 @@
+{
+  "total_applicants": 307511,
+  "overall_default_rate": 8.07,
+  "total_loan_volume": 184207084195,
+  "avg_loan_amount": 599026.0,
+  "avg_income": 168797.92,
+  "avg_age": 43.9,
+  "highest_risk_income_type": "Maternity leave (40.0%)",
+  "highest_risk_age_group": "20-30 years (11.4%)",
+  "highest_risk_education": "Lower secondary (10.9%)",
+  "strongest_predictor": "EXT_SOURCE_2 (corr: -0.160)",
+  "key_insights": [
+    "Maternity leave applicants default at 40% \u2014 5x the average rate",
+    "Borrowers aged 20-30 show 11.4% default rate \u2014 highest of all age groups",
+    "Lower education level strongly correlates with higher default risk",
+    "External credit scores (EXT_SOURCE_2/3) are the strongest risk predictors",
+    "Applicants renting homes default at 12.3% vs 7.8% for house owners"
+  ]
+}
