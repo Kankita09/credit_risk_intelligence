@@ -94,7 +94,7 @@ st.markdown("""
         box-shadow: 0 1px 3px rgba(0,0,0,0.07);
         border-left: 3px solid #3b82f6;
         font-size: 0.9rem;
-        color: #334155;
+        color: black;
         line-height: 1.5;
     }
     .insight-card.warning { border-left-color: #f59e0b; }
