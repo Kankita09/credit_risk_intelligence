@@ -461,8 +461,8 @@ elif page == "🔍 Risk Segmentation":
         fig2.update_traces(textposition='outside')
         fig2.update_layout(height=280, margin=dict(t=10, b=10, l=10, r=60),
                           coloraxis_showscale=False, plot_bgcolor='white', paper_bgcolor='white')
-         apply_chart_theme(fig2)
-         st.plotly_chart(fig2, use_container_width=True)
+        apply_chart_theme(fig2)
+        st.plotly_chart(fig2, use_container_width=True)
         # st.plotly_chart(fig2, use_container_width=True)
 
     col3, col4 = st.columns(2)
