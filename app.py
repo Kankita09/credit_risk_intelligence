@@ -159,26 +159,45 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
+# def apply_chart_theme(fig):
+#     fig.update_layout(
+#         font=dict(color="black"),
+#         xaxis=dict(
+#             tickfont=dict(color="black"),
+#             title_font=dict(color="black")
+#         ),
+#         yaxis=dict(
+#             tickfont=dict(color="black"),
+#             title_font=dict(color="black")
+#         ),
+#         legend=dict(font=dict(color="black"))
+#     )
+
+#     fig.update_traces(
+#         textfont=dict(color="black")
+#     )
+
+#     return fig
 def apply_chart_theme(fig):
     fig.update_layout(
         font=dict(color="black"),
+
         xaxis=dict(
             tickfont=dict(color="black"),
             title_font=dict(color="black")
         ),
+
         yaxis=dict(
             tickfont=dict(color="black"),
             title_font=dict(color="black")
         ),
-        legend=dict(font=dict(color="black"))
-    )
 
-    fig.update_traces(
-        textfont=dict(color="black")
+        legend=dict(
+            font=dict(color="black")
+        )
     )
 
     return fig
-
 
 # ── Data Loading ──────────────────────────────────────────────
 # @st.cache_data
@@ -605,6 +624,7 @@ elif page == "📈 Credit Behavior":
                 marker_color='#8b5cf6',
                 text=bureau_def['Default Rate'].apply(lambda x: f'{x:.1f}%'),
                 textposition='outside'
+                
             ))
             fig4.update_layout(height=320, margin=dict(t=30, b=10, l=10, r=10),
                               yaxis_title='Default Rate (%)',
