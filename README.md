@@ -197,7 +197,6 @@ This tool helps credit risk analysts and loan officers to:
 ## 👤 Author
 
 **Kakade**
-Data Analyst | Amdocs Selection Assignment
 Built with ❤️ using Python, Streamlit & Groq AI
 
 ---
